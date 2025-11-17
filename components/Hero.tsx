@@ -39,6 +39,16 @@ const heroProducts = [
 
 export default function Hero() {
   const [activeProduct, setActiveProduct] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -48,7 +58,10 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className={styles.hero}>
+    <section 
+      className={styles.hero}
+      style={isMobile ? { paddingTop: '150px' } : {}}
+    >
       <div className={styles.backgroundImage}>
         <Image
           src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"

@@ -214,7 +214,7 @@
 }
 
 .mobileCarousel {
-  display: none;
+  display: none !important;
 }
 
 .mobileCard {
@@ -382,12 +382,30 @@
     height: 60vh;
     min-height: 450px;
     max-height: 550px;
-    padding-top: 120px !important;
+    padding-top: 150px !important;
     margin-top: 0 !important;
   }
 
-  .container {
-    padding-top: 20px;
+  .hero .container {
+    padding-top: 40px !important;
+    margin-top: 0 !important;
+  }
+
+  .hero .content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .hero .textContent {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .mobileCarousel {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
   }
 
   .title {
@@ -408,8 +426,7 @@
   }
 
   .mobileCarousel {
-    display: block;
-    margin-top: 20px;
+    display: none !important;
   }
 
   .circle1,
@@ -423,4 +440,5 @@
     height: 80px;
   }
 }
+
 
