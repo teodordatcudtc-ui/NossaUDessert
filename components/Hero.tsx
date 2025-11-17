@@ -9,20 +9,13 @@ import styles from './Hero.module.css'
 const heroProducts = [
   {
     id: 1,
-    name: 'Tort Opera',
-    description: 'Straturi fine de ciocolată și cafea',
-    image:
-      'https://images.unsplash.com/photo-1542826438-82d48c1a0571?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 2,
     name: 'Entremet Ruby',
     description: 'Glazură oglindă și mousse de fructe roșii',
     image:
       'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
   },
   {
-    id: 3,
+    id: 2,
     name: 'Tartă Framboise',
     description: 'Cremă vanilie și zmeură proaspătă',
     image:

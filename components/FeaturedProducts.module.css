@@ -163,8 +163,24 @@
   }
 
   .grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+
+  .grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    min-width: 280px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
   }
 
   .imageContainer {
