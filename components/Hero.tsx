@@ -6,6 +6,20 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './Hero.module.css'
 
+const commandButtonStyle = {
+  background: '#553123',
+  color: '#ffffff',
+  border: '2px solid #553123',
+  boxShadow: '0 4px 15px rgba(85, 49, 35, 0.6)',
+  transition: 'all 0.3s ease',
+}
+
+const commandButtonHoverStyle = {
+  background: '#88655f',
+  borderColor: '#88655f',
+  boxShadow: '0 6px 20px rgba(136, 101, 95, 0.7)',
+}
+
 const heroProducts = [
   {
     id: 1,
@@ -142,7 +156,17 @@ export default function Hero() {
               <Link href="/meniu" className={`btn btn-primary ${styles.ctaButton}`}>
                 Explorează meniul
               </Link>
-              <Link href="/contact" className={`btn btn-secondary ${styles.ctaButton}`}>
+              <Link 
+                href="/contact" 
+                className={`btn btn-secondary ${styles.ctaButton}`}
+                style={commandButtonStyle}
+                onMouseEnter={(e) => {
+                  Object.assign(e.currentTarget.style, commandButtonHoverStyle)
+                }}
+                onMouseLeave={(e) => {
+                  Object.assign(e.currentTarget.style, commandButtonStyle)
+                }}
+              >
                 Comandă acum
               </Link>
             </motion.div>
