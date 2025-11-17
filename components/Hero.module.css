@@ -193,6 +193,7 @@
   padding: 14px 32px;
 }
 
+/* Buton Comandă acum - maro închis pentru vizibilitate */
 .ctaButton.btn-secondary {
   background: var(--color-secondary);
   color: var(--color-white);
