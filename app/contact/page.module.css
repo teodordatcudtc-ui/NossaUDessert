@@ -1,0 +1,157 @@
+.page {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-white);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  color: var(--color-white);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+.section {
+  padding: 80px 0;
+  background: var(--color-accent);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 32px;
+  color: var(--color-secondary);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contactItem {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.contactTitle {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: var(--color-secondary);
+}
+
+.contactLink {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.contactLink:hover {
+  color: var(--color-primary);
+}
+
+.callButton {
+  margin-top: 12px;
+  font-size: 14px;
+  padding: 10px 24px;
+}
+
+.hours {
+  margin-top: 16px;
+  padding: 24px;
+  background: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hoursText {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-top: 8px;
+}
+
+.formContainer {
+  background: var(--color-white);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mapContainer {
+  margin-top: 60px;
+}
+
+.map {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(136, 101, 95, 0.3);
+}
+
+.map iframe {
+  display: block;
+}
+
+@media (max-width: 968px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .formContainer {
+    padding: 24px;
+  }
+
+  .map iframe {
+    height: 300px;
+  }
+}
+
