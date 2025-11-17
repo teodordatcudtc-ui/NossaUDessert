@@ -60,7 +60,7 @@ export default function Hero() {
   return (
     <section 
       className={styles.hero}
-      style={isMobile ? { paddingTop: '150px' } : {}}
+      style={isMobile ? { paddingTop: '120px' } : {}}
     >
       <div className={styles.backgroundImage}>
         <Image
