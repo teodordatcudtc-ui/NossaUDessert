@@ -3,6 +3,13 @@
   padding-top: 80px;
 }
 
+.loading {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+}
+
 .hero {
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   color: var(--color-white);

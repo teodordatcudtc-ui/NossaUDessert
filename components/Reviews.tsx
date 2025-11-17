@@ -94,7 +94,7 @@ export default function Reviews() {
                     </svg>
                   ))}
                 </div>
-                <p className={styles.comment}>"{review.comment}"</p>
+                <p className={styles.comment}>&ldquo;{review.comment}&rdquo;</p>
                 <div className={styles.footer}>
                   <span className={styles.name}>{review.name}</span>
                   <span className={styles.date}>{review.date}</span>

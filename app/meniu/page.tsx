@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
@@ -91,7 +91,7 @@ const products = [
   },
 ]
 
-export default function MeniuPage() {
+function MeniuContent() {
   const searchParams = useSearchParams()
   const initialQuery = searchParams.get('q') ?? ''
   const [selectedCategory, setSelectedCategory] = useState('Toate')
@@ -114,28 +114,7 @@ export default function MeniuPage() {
   })
 
   return (
-    <div className={styles.page}>
-      <div className={styles.hero}>
-        <div className="container">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className={styles.title}
-          >
-            Meniul nostru
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className={styles.subtitle}
-          >
-            Descoperă selecția noastră de deserturi premium
-          </motion.p>
-        </div>
-      </div>
-
+    <>
       <section className={styles.section}>
         <div className="container">
           <div className={styles.searchBar}>
@@ -202,6 +181,37 @@ export default function MeniuPage() {
           </AnimatePresence>
         </div>
       </section>
+    </>
+  )
+}
+
+export default function MeniuPage() {
+  return (
+    <div className={styles.page}>
+      <div className={styles.hero}>
+        <div className="container">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className={styles.title}
+          >
+            Meniul nostru
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className={styles.subtitle}
+          >
+            Descoperă selecția noastră de deserturi premium
+          </motion.p>
+        </div>
+      </div>
+
+      <Suspense fallback={<div className={styles.loading}>Se încarcă...</div>}>
+        <MeniuContent />
+      </Suspense>
     </div>
   )
 }
